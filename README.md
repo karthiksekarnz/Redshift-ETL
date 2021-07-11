@@ -46,8 +46,9 @@ log_data/2018/11/2018-11-13-events.json
 - Then run ``python3 ./etl.py`` command to run the etl script to process the song and log data and import them into the database.
 
 ### Analysis queries
+Following are some analytical queries run on the redshift cluster
 
-- Top 5 most played songs
+#### Top 5 most played songs
 ```sql
 SELECT s.title AS "Song", COUNT(sp.song_id) AS "Sessions" 
 FROM songplays sp 
@@ -57,7 +58,10 @@ GROUP BY s.title
 ORDER BY sessions DESC LIMIT 5;
 ```
 
-- Top 5 most listened artists
+![Screen Shot 2021-07-11 at 7 07 54 PM](https://user-images.githubusercontent.com/2171885/125186278-9136a900-e27d-11eb-98aa-4d6ae9a786d1.png)
+
+
+#### Top 5 most listened artists
 
 ```sql
 SELECT a.name AS "Artist", COUNT(sp.artist_id) AS "Sessions" 
@@ -67,5 +71,4 @@ WHERE sp.artist_id IS NOT NULL
 GROUP BY a.name 
 ORDER BY sessions DESC LIMIT 5;
 ```
-
-
+![Screen Shot 2021-07-11 at 7 13 55 PM](https://user-images.githubusercontent.com/2171885/125186283-9693f380-e27d-11eb-8275-93671aeffeeb.png)
