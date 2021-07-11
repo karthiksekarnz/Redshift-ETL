@@ -71,4 +71,5 @@ WHERE sp.artist_id IS NOT NULL
 GROUP BY a.name 
 ORDER BY sessions DESC LIMIT 5;
 ```
-![Screen Shot 2021-07-11 at 7 13 55 PM](https://user-images.githubusercontent.com/2171885/125186283-9693f380-e27d-11eb-8275-93671aeffeeb.png)
+![Screen Shot 2021-07-11 at 9 38 55 PM](https://user-images.githubusercontent.com/2171885/125190289-77eb2800-e290-11eb-9547-6facac1d6dc3.png)
+
